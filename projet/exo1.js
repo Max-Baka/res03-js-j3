@@ -183,6 +183,8 @@ function hasBlueEyes(activeUsers) {
 }
 
 console.log(`Out of our currently ${countActiveUsers(users)} active users, ${hasBlueEyes(users)} have blue eyes.`);*/
+
+/*
 function getActiveUsers(users) {
     let tab = []; // création d'un tableau
         for (let i = 0; i< users.length; i++)
@@ -224,7 +226,62 @@ function computeActiveUsersAverageAge(ages) {
 }
 
 console.log(`Out of our currently ${getActiveUsers(users).length} active users, the average age is ${computeActiveUsersAverageAge(getActiveUsersAges(getActiveUsers(users)))}.`);
-/*getActiveUsers(users) 
+getActiveUsers(users) 
 getActiveUsersAges(getActiveUsers(users))
 computeActiveUsersAverageAge(getActiveUsersAges(getActiveUsers(users)))
+*/
+
+/*function getMultronUsers(users) {
+    let multi = [];
+    for( let i = 0; i < users.length; i++)
+    {
+        if(users[i].company === "MULTRON"){
+            multi.push(users[i].users);
+        }
+    }
+    return multi;
+}
+
+function setMultronToCenturia(users) {
+
+}
+
+console.log(`${getMultronUsers(users).length} user companies have been changed from MULTRON to CENTURIA.`);*/
+
+/*function getBrownEyedUsers(users) {
+ let multr = [];
+ for (let i = 0; i < users.length; i++)
+ {
+     if(users[i].eyeColor === "brown" && users[i].company !== "CENTURIA"){
+         multr.push(users[i].users);
+     }
+ }
+ return multr
+}
+
+function excludeCenturiaWorkers(users) {
+
+}
+
+console.log(`${getBrownEyedUsers(users).length} users with brown eyes do not work at CENTURIA`);*/
+
+
+
+
+function getBrownEyedUsers(users) {
+ let multr = [];
+ for (let i = 0; i < users.length; i++)
+ {
+     if(users[i].eyeColor === "brown" && users[i].isActive === true){
+         multr.push(users[i].users);
+     }
+ }
+ return multr;
+}
+console.log(users);
+/*console.log(`Out of our brown eyed users ${getBrownEyedUsers(users).length} are active and ${} are inactive`);
+
+console.log(`Out of our green eyed users ${} are active and ${} are inactive`);
+
+console.log(`Out of our blue eyed users ${} are active and ${} are inactive`);
 */
