@@ -184,7 +184,7 @@ function hasBlueEyes(activeUsers) {
 
 console.log(`Out of our currently ${countActiveUsers(users)} active users, ${hasBlueEyes(users)} have blue eyes.`);*/
 function getActiveUsers(users) {
-    let tab = [];
+    let tab = []; // création d'un tableau
         for (let i = 0; i< users.length; i++)
         {
             if(users[i].isActive === true)
@@ -201,7 +201,7 @@ function getActiveUsersAges(users) {
         for (let i = 0; i< users.length; i++)
         {
             
-                tab.push(users[i].age)
+                tab.push(users[i].age);
         }
         console.log(users);
         return tab;
@@ -209,15 +209,22 @@ function getActiveUsersAges(users) {
 
 
 function computeActiveUsersAverageAge(ages) {
+    console.log("avant age");
+    console.log(ages);
     let total = 0
         for (let i = 0; i < ages.length; i++)
         {
-            /*total = total + */
-            console.log(ages[i]);
+            total = total + ages[i];
+            console.log(total);
+           
         }
+        console.log(ages.length);
+        total = total / ages.length;
+        return total;
 }
 
-// console.log(`Out of our currently ${} active users, the average age is ${}.`);
-getActiveUsers(users) 
+console.log(`Out of our currently ${getActiveUsers(users).length} active users, the average age is ${computeActiveUsersAverageAge(getActiveUsersAges(getActiveUsers(users)))}.`);
+/*getActiveUsers(users) 
 getActiveUsersAges(getActiveUsers(users))
 computeActiveUsersAverageAge(getActiveUsersAges(getActiveUsers(users)))
+*/
