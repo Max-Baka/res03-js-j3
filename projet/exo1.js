@@ -160,21 +160,64 @@ let users = [
         company: "CENTURIA"
     }
 ];
-function countActiveUsers(users) {
+
+/*function countActiveUsers(users) {
     let nbr = 0;
-    let nbr1 = 0
      for (user of users)
      {
          if(user.isActive === true){
             nbr = nbr + 1;
          }
-         else if(user.eyeColor === blue){
-             nbr1 = nbr1 + 1;
-         }
      }
      return nbr;
-     return nbr1;
+}
+function hasBlueEyes(activeUsers) {
+    let nbr1 = 0;
+    for (user of users)
+    {
+        if(user.eyeColor === "blue" && user.isActive === true){
+            nbr1 = nbr1 + 1;
+        }
+    }
+    return nbr1;
+}
+
+console.log(`Out of our currently ${countActiveUsers(users)} active users, ${hasBlueEyes(users)} have blue eyes.`);*/
+function getActiveUsers(users) {
+    let tab = [];
+        for (let i = 0; i< users.length; i++)
+        {
+            if(users[i].isActive === true)
+            {
+                tab.push(users[i]);
+            }
+        }
+        console.log(users);
+        return tab;
+}
+
+function getActiveUsersAges(users) {
+    let tab = [];
+        for (let i = 0; i< users.length; i++)
+        {
+            
+                tab.push(users[i].age)
+        }
+        console.log(users);
+        return tab;
 }
 
 
-console.log(`Out of our currently ${} active users, ${} have blue eyes.`);
+function computeActiveUsersAverageAge(ages) {
+    let total = 0
+        for (let i = 0; i < ages.length; i++)
+        {
+            /*total = total + */
+            console.log(ages[i]);
+        }
+}
+
+// console.log(`Out of our currently ${} active users, the average age is ${}.`);
+getActiveUsers(users) 
+getActiveUsersAges(getActiveUsers(users))
+computeActiveUsersAverageAge(getActiveUsersAges(getActiveUsers(users)))
